@@ -47,6 +47,63 @@ namespace BeautyForestAgent
         {
             VisibleChange(true);
         }
+
+        private void ToolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 끝내기ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.statusMessage.Text = "종료합니다.";
+            Application.ExitThread();
+        }
+
+        private void 수정ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showFormModify();
+
+        }
+
+        private void showFormModify()
+        {
+            this.statusMessage.Text = "프로필 수정";
+            FormModify m = new FormModify();
+            // m.Title = "모달 창띄우기";
+            m.ShowDialog();
+        }
+
+        private void 추가ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showFormAdd();
+        }
+
+        private void showFormAdd()
+        {
+            this.statusMessage.Text = "프로필 추가";
+            FormAdd m = new FormAdd();
+            // m.Title = "모달 창띄우기";
+            m.ShowDialog();
+        }
+
+        private void 이프로그램은ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.statusMessage.Text = "FormAbout";
+            FormAbout m = new FormAbout();
+          //  m.Title = "이 프로그램은..(Modaless) 창 띄우기";
+            m.Show();
+
+        }
+
+        private void BtnModify_Click(object sender, EventArgs e)
+        {
+            showFormModify();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            showFormAdd();
+        }
     }
 
 }
